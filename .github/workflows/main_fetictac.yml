@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'FETicTac'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_85E054BB48E44EF28E0676737DBD598C }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E342F1F7B0CD4EEAA69F41739898133E }}
           package: .
