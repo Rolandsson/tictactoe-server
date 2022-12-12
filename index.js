@@ -18,8 +18,8 @@ app.use(cors({
 
 let rooms = []
 
-app.get("/room", (req, res) => {
-  res.send(rooms[req.body]);
+app.get("/room/:id", (req, res) => {
+  res.send(rooms[req.params.id]);
 });
 
 app.post("/room", (req, res) => {
