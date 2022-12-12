@@ -29,7 +29,7 @@ app.get("/room/:id", (req, res) => {
 
 app.post("/room", (req, res) => {
   rooms.push(req.body.board);
-  res.json(rooms.length + 999);
+  res.json({id: rooms.length + 999, board: req.body.board});
 });
 
 io.on("connection", socket => {
