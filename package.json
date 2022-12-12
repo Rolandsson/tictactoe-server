@@ -1,7 +1,7 @@
 {
   "name": "ticserver",
   "version": "1.0.0",
-  "description": "tic ping server",
+  "description": "Tic ping server",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
