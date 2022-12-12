@@ -23,18 +23,18 @@ app.get("/room/", (req, res) => {
 });
 
 app.get("/room/:id", (req, res) => {
-  res.send(rooms[Number(req.params.id) - 1000]);
+  res.send(rooms[Number(req.params.id) - 1001]);
 });
 
 app.post("/room", (req, res) => {
-  rooms.push(req.body);
-  res.json(rooms.length + 1000);
+  rooms.push(req.body.board);
+  res.json(rooms.length + 999);
 });
 
 io.on("connection", socket => {
   socket.on("tic-update", room => {
-    rooms[room.id - 1000] = room.board;
-    io.emit("tic-update-" + room.id, { id: room.id, board: rooms[room.id - 1000] });
+    rooms[room.id - 1001] = room.board;
+    io.emit("tic-update-" + room.id, { id: room.id, board: rooms[room.id - 1001] });
   });
 });
 
