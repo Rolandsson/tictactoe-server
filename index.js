@@ -9,7 +9,7 @@ const io = require("socket.io")(server, {
   }
 });
 
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 8080;
 
 app.use(cors({
   origin: '*'
@@ -34,6 +34,6 @@ io.on("connection", socket => {
   });
 });
 
-server.listen(3000, () => {
+server.listen(port, () => {
   console.log('listening on *:3000');
 });
