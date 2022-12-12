@@ -24,7 +24,7 @@ app.get("/room/", (req, res) => {
 });
 
 app.get("/room/:id", (req, res) => {
-  res.send(rooms[Number(req.params.id) - 1000]);
+  res.json({id: req.params.id, board: rooms[Number(req.params.id) - 1000]});
 });
 
 app.post("/room", (req, res) => {
