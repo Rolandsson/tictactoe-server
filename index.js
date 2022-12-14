@@ -19,6 +19,10 @@ app.use(express.json());
 
 let rooms = []
 
+app.get("/echo/:echoMessage", (req, res) => {
+  res.send(`Echo ${req.params.echoMessage}`);
+});
+
 app.get("/room/", (req, res) => {
    res.send(rooms);
 });
